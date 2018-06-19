@@ -1,0 +1,142 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+  .services {
+    max-width: $site-width-outer;
+    margin: 0 auto;
+    background-color: $section-services-bg-color;
+
+      &__wrapper {
+        max-width: $site-width-inner;
+        margin: 0 auto;
+        padding: 50px 15px 72px 15px;
+          @include screen-max-814 {
+            padding-bottom: 50px;
+          }
+          @include screen-max-430 {
+            padding: 15px 20px;
+          }
+      }
+      &__title {
+        position: relative;
+        margin-bottom: 60px;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+        color: $font-gray;
+        text-align: center;
+          @include screen-max-640 {
+            font-size: 34px;
+            line-height: 40px;
+          }
+          @include screen-max-430 {
+            margin-bottom: 40px;
+          }
+
+          span{
+            @include screen-max-606 {
+              display: block;
+            }
+          }
+          &::after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-top: 9px;
+            transform: translateX(-50%);
+            width: 48%;
+            content: '';
+            height: 3px;
+            background-color: $green-bg-color;
+              @include screen-max-1158 {
+                width: 90%;
+              }
+              @include screen-max-720 {
+                width: 95%;
+              }
+          }
+      }
+      &__content {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+          &--width {
+            display: flex;
+            justify-content: space-between;
+            width: 33.33333333333333%;
+            box-sizing: border-box;
+              @include screen-max-1158 {
+                justify-content: center;
+                width: 50%;
+                margin-bottom: 40px;
+              }
+              @include screen-max-814 {
+                width: 100%;
+              }
+              @include screen-max-430 {
+                margin-bottom: 30px;
+              }
+
+              &:last-child {
+                  @include screen-max-1158 {
+                    margin: auto;
+                  }
+              }
+          }
+
+          &--img {
+            flex-basis: 53px;
+            height: 60px;
+            margin-right: 39px;
+              @include screen-max-430 {
+                margin-right: 15px;
+              }
+          }
+          &--wrapper {
+            flex-basis: 300px;
+              @include screen-max-430 {
+                flex-basis: 230px;
+              }
+          }
+          &--title {
+            margin-bottom: 31px;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 32px;
+            color: $font-gray;
+              @include screen-max-1158 {
+                margin-bottom: 20px;
+              }
+              @include screen-max-640 {
+                font-size: 28px;
+                line-height: 28px;
+              }
+          }
+          &--subtitle {
+            font-weight: 300;
+            font-size: 22px;
+            color: $font-gray;
+              @include screen-max-640 {
+                font-size: 18px;
+              }
+          }
+      }
+
+    &__bg--1 {
+      background-image: url("../img/services-ico-1.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    &__bg--2 {
+       background-image: url("../img/services-ico-2.png");
+       background-position: center center;
+       background-repeat: no-repeat;
+     }
+    &__bg--3 {
+        background-image: url("../img/services-ico-3.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+  }

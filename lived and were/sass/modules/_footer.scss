@@ -1,0 +1,42 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.footer {
+  max-width: $site-width-outer;
+  margin: 0 auto;
+  background-color: $blue-bg-color;
+
+    &__width {
+      display: flex;
+      justify-content: flex-end;
+      max-width: $site-width-inner + 235;
+      margin: 0 auto;
+    }
+    &__wrapper {
+      display: flex;
+      align-items: flex-end;
+      max-width: $site-width-inner + 110;
+      padding: 35px 15px 45px 15px;
+        @include screen-max-817 {
+          flex-direction: column;
+          text-align: center;
+        }
+    }
+    &__logo {
+      align-self: center;
+      display: inline-block;
+      min-width: 223px;
+      padding-right: 43px;
+        @include screen-max-817 {
+          padding-right: 0;
+          margin-bottom: 30px;
+        }
+    }
+    &__content {
+      margin-bottom: 0;
+      color: $font-white;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+    }
+}

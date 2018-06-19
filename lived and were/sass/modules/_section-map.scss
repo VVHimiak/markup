@@ -1,0 +1,96 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+  .map {
+    max-width: $site-width-outer;
+    margin: 0 auto;
+    background-color: $white-bg-color;
+    background-image: url("../../img/map-bg.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+      &__wrapper {
+        position: relative;
+        max-width: $site-width-inner;
+        margin: 0 auto;
+        padding: 94px 0 0 0;
+
+          @include screen-max-814 { padding-top: 30px; }
+      }
+      &__title {
+        margin-bottom: 75px;
+        font-weight: 400;
+        font-size: 36px;
+        text-align: center;
+          @include screen-max-640 {
+            margin-bottom: 20px;
+            font-size: 34px;
+          }
+          @include screen-max-950 { margin-bottom: 20px; }
+          @include screen-max-467 {
+            margin-bottom: 10px;
+            font-size: 30px;
+          }
+      }
+      &__content {
+        max-width: 895px;
+        max-height: 526px;
+        margin: 0 auto;
+
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+          @include screen-max-950 {
+            max-width: 695px;
+            min-height: 526px;
+          }
+
+          &--top {
+            width: 100%;
+            height: 80px;
+            background-image: url("../img/map-top.png");
+            //background-attachment: local;
+            //background-origin: padding-box;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: contain;
+            box-shadow: 3px 0 51px inset rgba(0, 0, 0, .42);
+          }
+          &--bottom {
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 3px 0 51px rgba(0, 0, 0, .42);
+          }
+      }
+      &__button {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        min-width: 270px;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        padding: 1.11111em 8.166666667em;
+        font-weight: 400;
+        font-size: 1.125em;
+        line-height: 2.1875em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #f8f8f8;
+        background-color: $blue-bg-color;
+        border-radius: 2px;
+        text-decoration: none;
+        z-index: 2;
+        box-shadow: 3px 0 51px rgba(0, 0, 0, .42);
+          @include screen-max-950 { font-size: 1em; }
+          @include screen-max-814 { padding: 10px 80px; }
+          @include screen-max-606 { padding: 10px 50px; }
+
+          &:hover {
+            color: #f8f8f8;
+            text-decoration: none;
+          }
+      }
+  }
+  #map {
+    height: 446px;
+    width: 100%;
+  }

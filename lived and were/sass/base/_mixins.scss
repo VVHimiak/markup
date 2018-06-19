@@ -1,0 +1,110 @@
+// media-queries
+
+@mixin screen-max-1191 () {
+  @media only screen and (max-width: 1191px) {
+    @content;
+  }
+}
+
+@mixin screen-max-1158 () {
+  @media only screen and (max-width: 1158px) {
+    @content;
+  }
+}
+
+@mixin screen-max-1127 () {
+  @media only screen and (max-width: 1127px) {
+    @content;
+  }
+}
+
+@mixin screen-max-1052 () {
+  @media only screen and (max-width: 1052px) {
+    @content;
+  }
+}
+
+@mixin screen-max-992 () {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin screen-max-950 () {
+  @media only screen and (max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin screen-max-875 () {
+  @media only screen and (max-width: 875px) {
+    @content;
+  }
+}
+
+@mixin screen-min-875 () {
+  @media only screen and (min-width: 875px) {
+    @content;
+  }
+}
+
+
+@mixin screen-max-817 () {
+  @media only screen and (max-width: 817px) {
+    @content;
+  }
+}
+
+@mixin screen-max-814 () {
+  @media only screen and (max-width: 814px) {
+    @content;
+  }
+}
+
+@mixin screen-max-768 () {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-max-720 () {
+  @media only screen and (max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin screen-max-670 () {
+  @media only screen and (max-width: 670px) {
+    @content;
+  }
+}
+
+@mixin screen-max-640 () {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin screen-max-606 () {
+  @media only screen and (max-width: 606px) {
+    @content;
+  }
+}
+
+@mixin screen-max-533 () {
+  @media only screen and (max-width: 533px) {
+    @content;
+  }
+}
+
+@mixin screen-max-467 () {
+  @media only screen and (max-width: 467px) {
+    @content;
+  }
+}
+@mixin screen-max-430 () {
+  @media only screen and (max-width: 430px) {
+    @content;
+  }
+}
+

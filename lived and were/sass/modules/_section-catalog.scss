@@ -1,0 +1,119 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+  .catalog {
+    position: relative;
+    max-width: $site-width-outer;
+    min-height: 512px;
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 75px;
+    background-image: url("../img/catalog-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+
+      &__wrapper {
+        max-width: 945px;
+        margin: 0 auto;
+        padding: 34px 20px 39px 20px;
+        background-color: $section-catalog-bg-color;
+        border-radius: 5px;
+      }
+      &__filter {
+        min-height: 66px;
+        margin-bottom: 34px;
+        padding: 0;
+        background-color: $catalog-color;
+        border-radius: 2px;
+        box-shadow: 3px 1px 3px rgba(0, 0, 0, .15);
+
+          &--wrapper { margin: 0; }
+          &--selects {
+            height: 100%;
+            padding: 11px 25px;
+            text-align: center;
+          }
+          &--btn {
+            min-height: 66px;
+            min-width: 100px;
+            background-color: $blue-bg-color;
+            background-image: url("../img/search-ico.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            border-width: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+              @include screen-max-992 {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 2px;
+                border-bottom-left-radius: 2px;
+              }
+          }
+      }
+
+      &__title {
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        color: $catalog-color;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      &__subtitle {
+        margin-bottom: 43px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: $catalog-color;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      &__button { text-align: center;
+
+          a {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0.875em 5.125em;
+            font-weight: 400;
+            font-size: 1.125em;
+            line-height: 2.1875em;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: $orange-bg-color;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+              @include screen-max-950 {
+                font-size: 1em;
+              }
+              @include screen-max-814 {
+                padding: 10px 80px;
+              }
+              @include screen-max-606 {
+                padding: 10px 50px;
+              }
+
+              &:hover { text-decoration: none; }
+
+              &::before {
+                position: absolute;
+                left: 46px;
+                top: 14px;
+                content: '+';
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 33px;
+                  @include screen-max-814 {
+                   top: 10px;
+                  }
+                  @include screen-max-606 {
+                    left: 20px;
+                  }
+              }
+            }
+        }
+    }

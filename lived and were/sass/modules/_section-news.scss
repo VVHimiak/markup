@@ -1,0 +1,61 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+  .news {
+    max-width: $site-width-outer;
+    margin: 0 auto;
+    background-color: $white-bg-color;
+
+      &__wrapper {
+        display: flex;
+        max-width: $site-width-inner;
+        margin: 0 auto;
+        padding: 11px 0 72px 0;
+          @include screen-max-1191 {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-bottom: 32px;
+          }
+      }
+      &__card {
+        flex-basis: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        text-align: center;
+          @include  screen-max-1191 {
+            margin-bottom: 40px;
+          }
+      }
+      &__img {
+        display: block;
+        max-width: 263px;
+        max-height: 203px;
+        margin: 0 auto 31px auto;
+      }
+      &__title {
+        margin-bottom: 23px;
+
+          a {
+            font-weight: 600;
+            font-size: 20px;
+            color: $font-gray;
+            transition: all .5s;
+
+              &:hover {
+                color: $blue-bg-color;
+              }
+        }
+      }
+      &__subtitle {
+        margin: 0 auto;
+        font-weight: 300;
+        font-size: 18px;
+          @include screen-max-1191 {
+            width: 80%;
+          }
+          @include screen-max-720 {
+            width: 90%;
+          }
+      }
+  }

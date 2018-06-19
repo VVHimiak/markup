@@ -1,0 +1,82 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+  .app {
+    max-width: $site-width-outer;
+    margin: 0 auto;
+    padding-top: 120px;
+    background-image: url("../img/app-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+      @include screen-max-875 {
+        padding: 90px 15px 0 15px;
+      }
+
+      &__wrapper {
+        display: flex;
+        max-width: $site-width-inner + 62;
+        min-height: 512px;
+        margin: 0 auto;
+          @include screen-max-875 {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            min-height: 0;
+          }
+      }
+      &__android--small {
+        display: none;
+          @include screen-max-875 {
+            display: block;
+            margin-bottom: 40px;
+          }
+      }
+      &__content{
+        padding-left: 125px;
+        padding-right: 15px;
+          @include screen-max-875 {
+            display: none;
+          }
+
+          @include screen-max-1127 {
+            padding-left: 50px;
+          }
+
+          h2 {
+            padding-top: 45px;
+            margin-bottom: 43px;
+            color: $font-white;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 36px;
+              @include screen-max-1052 {
+                margin-bottom: 33px;
+                font-size: 34px;
+                line-height: 34px;
+              }
+          }
+          p {
+            margin-bottom: 35px;
+            max-width: 500px;
+            font-weight: 400;
+            font-size: 24px;
+            color: #fff;
+              @include screen-max-1052 {
+                margin-bottom: 30px;
+                font-size: 22px;
+              }
+
+              &:nth-last-child(2) {
+                margin-bottom: 154px;
+                  @include screen-max-1052 {
+                    margin-bottom: 120px;
+                  }
+              }
+          }
+      }
+      &__img {
+        margin-bottom: 0;
+      }
+  }

@@ -1,0 +1,162 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+// Style the dropdown
+  .nice-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: $input_height;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: left;
+    color: #475055;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+      @include screen-max-992 { text-align: center;}
+
+  // Arrow
+    &:after {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform-origin: 66% 66%;
+      transform: rotate(45deg);
+      display: block;
+      height: 15px;
+      width: 15px;
+      margin-top: -12px;
+      border-bottom: 2px solid $arrow_color;
+      border-right: 2px solid $arrow_color;
+      content: '';
+      pointer-events: none;
+      transition: all 0.15s ease-in-out;
+    }
+  
+    &.open {
+
+      @extend :active;
+
+      &:after { transform: rotate(-135deg); }
+      .list {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+  }
+  &.disabled {
+    color: $gray;
+    pointer-events: none;
+
+      &:after { border-color: lighten($arrow_color, 20%); }
+  }
+  
+  // Modifiers
+  &.wide {  width: 100%;
+
+      .list {
+        left: 0;
+        right: 0;
+      }
+  }
+  &.right { float: right;
+
+      .list {
+        left: auto;
+        right: 0;
+      }
+  }
+  &.small {
+    height: $input_height_small;
+    font-size: $font_size_small;
+    line-height: $input_height_small - 2;
+
+      &:after {
+        height: 4px;
+        width: 4px;
+      }
+      .option {
+        min-height: $input_height_small - 2;
+        line-height: $input_height_small - 2;
+
+      }
+  }
+  
+  // List and options
+  .list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scale(.75) translateY(- $input_height / 2);
+    z-index: 9;
+    padding: 0;
+    margin-top: 12px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 0 1px rgba($gray_dark, .11);
+    box-sizing: border-box;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+
+      &:hover .option:not(:hover) { background-color: transparent;  }
+  }
+  .option {
+    min-height: $input_height - 2;
+    padding-left: $dropdown_padding;
+    padding-right: $dropdown_padding + 11;
+    font-weight: 400;
+    line-height: $input_height - 2;
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s;
+      @include screen-max-992 { text-align: center; }
+
+      &:hover,
+      &.focus,
+      &.selected.focus {  background-color: rgb(234,92,44); }
+      &.selected {  font-weight: bold;  }
+      &.disabled {
+        color: $gray;
+        background-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+
+// Use display instead of opacity for IE <= 10
+
+  .no-csspointerevents .nice-select {
+
+      .list { display: none;  }
+      &.open {
+          .list {
+            display: block;
+          }
+      }
+  }
+
+  .list__center {
+    display: block;
+    transition: all .5s;
+      @include screen-max-992 {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $blue-bg-color;
+      }
+  }

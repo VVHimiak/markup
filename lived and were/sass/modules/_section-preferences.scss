@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+  .preferences {
+    max-width: $site-width-outer;
+    margin: 0 auto;
+    background-color: $section-preferences-bg-color;
+
+      &__wrapper {
+        max-width: $site-width-inner;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        text-align: left;
+          @include screen-max-533 {
+            text-align: center;
+          }
+
+          h3 {
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            color: $font-gray;
+            }
+          ul {
+            margin: 0;
+            list-style: none;
+            }
+            li {
+              display: inline-block;
+              padding-right: 25px;
+                @include screen-max-533 {
+                  display: block;
+                }
+
+                a {
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: $font-gray;
+                  text-decoration: none;
+                  transition: all .5s;
+
+                    &:hover {
+                      color: $blue-bg-color;
+                      text-decoration: underline;
+                    }
+                }
+            }
+      }
+      &__sell {
+        margin-bottom: 55px;
+      }
+  }
