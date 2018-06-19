@@ -8,6 +8,7 @@
     z-index: 1;
   }
   &__nav {
+    font-family: 'Lora';
     .nav {
       &__logo {
         background-color: red;
@@ -17,6 +18,14 @@
 
         .menu {
           &__contacts {
+            .contacts {
+              &__tel {
+
+              }
+              &__email {
+
+              }
+            }
 
           }
           &__links {

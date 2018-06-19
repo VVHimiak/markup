@@ -2836,6 +2836,26 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   -ms-perspective: 1200px; }
 
+/* lora-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lora-font/lora-v12-cyrillic_latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Regular"), local("Lora-Regular"), url("../fonts/lora-font/lora-v12-cyrillic_latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lora-font/lora-v12-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/lora-font/lora-v12-cyrillic_latin-regular.woff") format("woff"), url("../fonts/lora-font/lora-v12-cyrillic_latin-regular.ttf") format("truetype"), url("../fonts/lora-font/lora-v12-cyrillic_latin-regular.svg#Lora") format("svg");
+  /* Legacy iOS */ }
+
+/* lora-700 - cyrillic_latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lora-font/lora-v12-cyrillic_latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Lora Bold"), local("Lora-Bold"), url("../fonts/lora-font/lora-v12-cyrillic_latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/lora-font/lora-v12-cyrillic_latin-700.woff2") format("woff2"), url("../fonts/lora-font/lora-v12-cyrillic_latin-700.woff") format("woff"), url("../fonts/lora-font/lora-v12-cyrillic_latin-700.ttf") format("truetype"), url("../fonts/lora-font/lora-v12-cyrillic_latin-700.svg#Lora") format("svg");
+  /* Legacy iOS */ }
+
 /* TITLES
  * -------------------------- */
 .nice-select {
@@ -3049,10 +3069,12 @@ button.swiper-pagination-bullet {
   .header__wrapper {
     position: absolute;
     z-index: 1; }
-  .header__nav .nav__logo {
-    background-color: red; }
-  .header__nav .nav__menu {
-    background-color: green; }
+  .header__nav {
+    font-family: 'Lora'; }
+    .header__nav .nav__logo {
+      background-color: red; }
+    .header__nav .nav__menu {
+      background-color: green; }
   .header .swiper-container {
     z-index: 0;
     position: relative;
