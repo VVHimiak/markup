@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optimed</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<section class="add-card">
+    <div class="enter-map__main--top">
+        <a class="enter-map__main--top-button">Пользователи</a>
+        <p class="enter-map__main--top-description">Вы вошли под логином: <span class="enter-map__main--top-login">TestTest TestTestTest Test</span></p>
+    </div>
+<header class="add-card__header">
+   <a class="add-card__header--ancor" href="#"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>назад</a>
+    <h2 class="add-card__header--title">Добовление дистрибьютора</h2>
+</header>
+    <div class="add-card__content">
+        <form>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Название дистрибьютора:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="Zeplin">
+                </div>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Округ:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="ПФО">
+                </div>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Город:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="Москва">
+                </div>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Адрес:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="ул. Пушкина, дом № 37">
+                </div>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Телефон:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="+789 093 233 43 34">
+                </div>
+            </div>
+            <div class="add-card__content--step contact-face">
+                <h3 class="add-card__content-title">Контактное лицо<span class="add-card__content-title--number-contact">1</span>:</h3>
+                <div class="add-card__content-inputs">
+
+                    <input class="add-card__content-input" type="text" placeholder="Менеджер по продажам">
+
+                    <input class="add-card__content-input" type="text" placeholder="info@medicom.ru">
+
+                    <input class="add-card__content-input" type="text" placeholder="+789 093 233 43 34">
+                </div>
+                <button type="button" class="add-card__content-trash add-trash-contact"><img src="img/trash.png" alt=""></button>
+                <button type="button" class="add-card__content-add-new add-new-contact">Добавить</button>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Проект<span class="add-card__content-title--number-project">1</span>:</h3>
+                <div class="add-card__content-inputs">
+
+                    <input class="add-card__content-input" type="text" placeholder="Модель">
+
+                    <input class="add-card__content-input" type="text" placeholder="23 шт">
+
+                    <div class="add-card__content-input--wrapper">
+                        <input class="add-card__content-input datepicker" type="text" >
+                    </div>
+                    <button type="button" class="add-card__content-trash add-trash-project"><img src="img/trash.png" alt=""></button>
+                </div>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Проект<span class="add-card__content-title--number-project">2</span>:</h3>
+                <div class="add-card__content-inputs">
+
+                    <input class="add-card__content-input" type="text" placeholder="Модель">
+
+                    <input class="add-card__content-input" type="text" placeholder="23 шт">
+
+                    <div class="add-card__content-input--wrapper">
+                        <input class="add-card__content-input datepicker" type="text">
+                    </div>
+
+                </div>
+                <button type="button" class="add-card__content-trash add-trash-project"><img src="img/trash.png" alt=""></button>
+                <button type="button" class="add-card__content-add-new add-new-project">Добавить</button>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Связное ЛПУ<span class="add-card__content-title--number-LPY">1</span>:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="Модель">
+                </div>
+            </div>
+            <div class="add-card__content--step">
+                <h3 class="add-card__content-title">Связное ЛПУ<span class="add-card__content-title--number-LPY">2</span>:</h3>
+                <div class="add-card__content-inputs">
+                    <input class="add-card__content-input" type="text" placeholder="Модель">
+                </div>
+            </div>
+            <div class="add-card__form--buttons">
+                <input class="add-card__form--button-reset" type="reset" value="Назад">
+                <input class="add-card__form--button-submit" type="submit" value="Сохранить">
+            </div>
+        </form>
+    </div>
+</section>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
